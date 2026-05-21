@@ -5,14 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小火箭共享账号 - 每日更新</title>
   <style>
-    body { font-family: "Microsoft YaHei", sans-serif; background: #f8f9fa; margin: 0; padding: 15px; }
-    .header { text-align: center; padding: 25px; background: linear-gradient(135deg, #ff6b6b, #4ecdc4); color: white; border-radius: 16px; margin-bottom: 20px; }
-    .card { background: white; border-radius: 12px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .warning { background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 5px solid #ffc107; color: #856404; }
-    button { background: #007bff; color: white; border: none; padding: 12px 20px; margin: 5px 5px 5px 0; border-radius: 8px; cursor: pointer; font-size: 16px; }
+    body { 
+      font-family: "Microsoft YaHei", system-ui, sans-serif; 
+      background: #f8f9fa; 
+      margin: 0; 
+      padding: 15px; 
+      line-height: 1.6;
+    }
+    .header { 
+      text-align: center; 
+      padding: 30px 20px; 
+      background: linear-gradient(135deg, #ff6b6b, #4ecdc4); 
+      color: white; 
+      border-radius: 16px; 
+      margin-bottom: 20px; 
+    }
+    .card { 
+      background: white; 
+      border-radius: 12px; 
+      padding: 20px; 
+      margin: 15px 0; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    }
+    .warning { 
+      background: #fff3cd; 
+      padding: 15px; 
+      border-radius: 8px; 
+      border-left: 5px solid #ffc107; 
+      color: #856404; 
+      margin-bottom: 20px;
+    }
+    button { 
+      background: #007bff; 
+      color: white; 
+      border: none; 
+      padding: 12px 20px; 
+      margin: 5px 8px 5px 0; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      font-size: 16px; 
+    }
     button:hover { background: #0056b3; }
-    .buy-btn { background: #ff4757; font-size: 18px; padding: 18px; width: 100%; font-weight: bold; }
-    .account { background: #f8f9fa; padding: 15px; border-radius: 10px; margin: 10px 0; border: 1px solid #eee; }
+    .buy-btn { 
+      background: #ff4757; 
+      font-size: 18px; 
+      padding: 18px; 
+      width: 100%; 
+      font-weight: bold; 
+      margin-top: 10px;
+    }
+    .account { 
+      background: #f8f9fa; 
+      padding: 15px; 
+      border-radius: 10px; 
+      margin: 12px 0; 
+      border: 1px solid #eee; 
+    }
   </style>
 </head>
 <body>
@@ -30,7 +78,21 @@
 <div class="card">
   <h2>当前可用共享账号</h2>
   <!-- apple starts -->
-  <p><strong>正在加载最新账号...</strong>（请刷新页面）</p>
+  <div class="account">
+    <strong>账号 1（美国）</strong><br>
+    Apple ID: <code>test123@icloud.com</code> 
+    <button onclick="copyText('test123@icloud.com')">📋 复制账号</button><br>
+    密码: <code>123456</code> 
+    <button onclick="copyText('123456')">📋 复制密码</button>
+  </div>
+
+  <div class="account">
+    <strong>账号 2（日本）</strong><br>
+    Apple ID: <code>test456@outlook.com</code> 
+    <button onclick="copyText('test456@outlook.com')">📋 复制账号</button><br>
+    密码: <code>abcdef</code> 
+    <button onclick="copyText('abcdef')">📋 复制密码</button>
+  </div>
   <!-- apple ends -->
 </div>
 
@@ -52,8 +114,17 @@
 </div>
 
 <p style="text-align:center; color:#666; margin-top:30px;">
-  短域名：<strong>ios3.cn</strong> | 主站：<a href="https://www.qianxun1688.com/liebiao/2A2466E850439A7A">qianxun1688.com</a>
+  短域名：<strong>ios3.cn</strong> | 
+  主站：<a href="https://www.qianxun1688.com/liebiao/2A2466E850439A7A">qianxun1688.com</a>
 </p>
+
+<script>
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert('✅ 已复制：' + text);
+  });
+}
+</script>
 
 </body>
 </html>
